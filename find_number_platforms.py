@@ -26,8 +26,6 @@ limit_platform = int(input())
 # limit_platform = 3
 # weight_robots = [3, 5, 3, 4]
 # limit_platform = 5
-# weight_robots = [3, 2, 2, 1]
-# limit_platform = 3
 # weight_robots = [50, 50, 50, 50]
 # limit_platform = 100
 if __name__ == '__main__':
