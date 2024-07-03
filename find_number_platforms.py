@@ -1,21 +1,20 @@
-"""Документация для кода 115795162."""
+"""Документация для кода ID115803099."""
 
 
 def find_number_platforms(
         weight_robots: list[int], limit_platform: int) -> int:
     """Обявляем функцию для подсчёта тележек."""
     sort_weight_robots = sorted(weight_robots)
-    light_robot: int = 0
-    heavy_robot: int = len(sort_weight_robots) - 1
+    left_index: int = 0
+    right_index: int = len(sort_weight_robots) - 1
     counter: int = 0
-    while light_robot <= heavy_robot:
+    while left_index <= right_index:
         weight_two_robots: int = sort_weight_robots[
-            light_robot] + sort_weight_robots[heavy_robot]
-        light_robot += 1
+            left_index] + sort_weight_robots[right_index]
+        right_index -= 1
         counter += 1
-        heavy_robot -= 1
-        if weight_two_robots > limit_platform:
-            light_robot -= 1
+        if weight_two_robots <= limit_platform:
+            left_index += 1
     return counter
 
 
