@@ -15,13 +15,13 @@ def mountains(mountain):
             return False
     return True
     
+def main():
+    with open("input.txt", "r") as file_in:
+        mountain = [int(x) for x in file_in.readline().split()] 
+        result = mountains(mountain)
+    with open("output.txt", "w") as file_out:
+        file_out.write(str(result))
 
-mountain = [int(x) for x in input().split()]
-# mountain = [0, 3, 2, 1]
-# mountain = [3, 5, 5]
-# mountain = [2, 1, 3, 5, 8]
-# mountain = [10, 20, 30, 40, 30, 20, 10]
-# mountain = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 if __name__ == '__main__':
-    print(mountains(mountain))
+    main()

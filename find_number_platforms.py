@@ -17,8 +17,14 @@ def find_number_platforms(
             left_index += 1
     return counter
 
+def main():
+    with open("input.txt", "r") as file_in:
+        weight_robots = [int(x) for x in file_in.readline().rstrip().split()]
+        limit_platform = int(file_in.readline().rstrip())
+    result = find_number_platforms(weight_robots, limit_platform)
+    with open("output.txt", "w") as file_out:
+        file_out.write(str(result))
+
 
 if __name__ == '__main__':
-    weight_robots = [int(x) for x in input().split()]
-    limit_platform = int(input())
-    print(find_number_platforms(weight_robots, limit_platform))
+    main()

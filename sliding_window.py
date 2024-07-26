@@ -1,4 +1,3 @@
-
 def find_substring(seq):
     sub = ''
     max_sub = 0
@@ -12,13 +11,16 @@ def find_substring(seq):
     return max_sub
 
 
-        
+def main():
+    with open("input.txt", "r") as file_in:
+        seq = file_in.readline().rstrip()
+    result = find_substring(seq)
+    with open("output.txt", "w") as file_out:
+        file_out.write(str(result)) 
 
 
 if __name__ == '__main__':
-    seq = input()
-    # seq = 'abcabcbb'
-    print(find_substring(seq))
+    main()
 
             
 

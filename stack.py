@@ -13,9 +13,17 @@ def is_correct_bracket_seq(item):
             stack.pop()
     return len(stack) == 0
 
+def main():
+    with open("input.txt", "r") as file_in:
+        item = file_in.readline() 
+        result = is_correct_bracket_seq(item)
+    with open("output.txt", "w") as file_out:
+        file_out.write(str(result))
+
 
 if __name__ == '__main__':
+    main()
     # item = input().split()
     # print(is_correct_bracket_seq(item))
-    item = ['{', '[', '(', ')', ']', '}']
-    print(is_correct_bracket_seq(item))
+    # item = ['{', '[', '(', ')', ']', '}']
+    # print(is_correct_bracket_seq(item))
